@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue'
+import Component from 'vue-class-component'
 
 @Component
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-@import "../assets/css/reset.scss";
-@import "../assets/css/common.scss";
+@import '../assets/css/reset.scss';
+@import '../assets/css/common.scss';
 </style>

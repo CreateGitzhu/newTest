@@ -1,7 +1,7 @@
 <template>
   <!-- 首页 -->
   <div>
-    <div class="pro_container">{{title}}</div>
+    <div class="pro_container" @click="getClick">{{title}}</div>
   </div>
 </template>
 
@@ -12,8 +12,11 @@ import Component from 'vue-class-component'
 @Component
 export default class Home extends Vue {
   title = '你好a'
+  getClick() {
+    console.log(23)
+  }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 </style>
