@@ -51,10 +51,10 @@ export function createRouter(routes) {
 
   // 钩子
   router.beforeEach((to, from, next) => {
+    // console.log(from)
     next()
   })
   router.afterEach((to, from) => { })
-
   return router
 }
 

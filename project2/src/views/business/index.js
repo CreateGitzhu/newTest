@@ -1,28 +1,28 @@
-import { createVue, createRouter, createStore } from '../../utils/index'
+import {
+  createVue,
+  createRouter,
+  createStore
+} from '../../utils/index'
 
-import Home from './Home.vue'
 
-const routes = [
-  {
-    path: '/business/index',
-    name: 'home',
-    component: Home,
-  }
-]
+const routes = [{
+  path: '/business/index',
+  name: 'home',
+  component: () => import('./Home.vue'),
+}]
 
 const modules = {
   home: {
     state: {
       userInfo: {}, // 用户信息
-      currentClassName: '', // 当前的班级名称
+      isLogin:false,//是否已登录
     },
     mutations: {
-      saveUserInfo (state, userInfo) {
+      saveUserInfo(state, userInfo) {
         state.userInfo = userInfo
+        state.isLogin = true //已登录
       },
-      setCurrentClassName (state, name) { // 设置当前班级名称
-        state.currentClassName = name
-      },
+      
     },
     actions: {
 
